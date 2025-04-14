@@ -80,7 +80,11 @@ int main() {
     cin >> num_nodes; // get numbers of nodes
 
     vector<vector<Edge>> graph = createGraph(num_nodes); // send over number of nodes to make our network graph
-    dijkstra(graph, 0);
+
+    int start;
+    cout << "Enter starting node:";
+    cin >> start;
+    dijkstra(graph, start);
 
     return 0;
 }
